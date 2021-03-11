@@ -14,8 +14,8 @@ class Ejercicio1Test {
 
 	@ParameterizedTest (name = "{index} => Con entrada ({0}) sale {1}")
 	@CsvSource({"2, 1",
-				"5, 1",
-				"6, 1",
+				"10, 4",
+				"6, 2",
 				"14, 7"})
 	
 	void testTransformar(int input, int expected) {
