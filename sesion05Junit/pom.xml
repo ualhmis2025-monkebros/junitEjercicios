@@ -155,18 +155,7 @@
 			<plugin>
 				<groupId>org.owasp</groupId>
 				<artifactId>dependency-check-maven</artifactId>
-				<version>5.3.2</version>
-				<configuration>
-					<scanSet>
-						<fileSet>
-							<directory>${project.basedir}</directory>
-							<includes>
-								<include>${project.basedir}/test/**/*.java</include>
-								<include>${project.basedir}/src/**/*.java</include>
-							</includes>
-						</fileSet>
-					</scanSet>
-				</configuration>
+				<version>6.1.5</version>
 				<reportSets>
 					<reportSet>
 						<reports>
@@ -180,7 +169,7 @@
       <plugin>
         <groupId>com.github.spotbugs</groupId>
         <artifactId>spotbugs-maven-plugin</artifactId>
-        <version>4.0.0</version>
+        <version>4.2.2</version>
         <configuration>
           <effort>Max</effort>
           <threshold>Low</threshold>
@@ -233,11 +222,18 @@
 			<scope>test</scope>
 		</dependency>
 	
+	  <!-- Example of vulnerable dependency. IMPORTANT: remove <scope>test</scope> if it appears!!!! --> 
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
-			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-collections4</artifactId>
+		    <version>4.0</version>
 		</dependency>
 
 	</dependencies>
