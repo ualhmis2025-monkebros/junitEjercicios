@@ -151,11 +151,14 @@
 				<artifactId>maven-project-info-reports-plugin</artifactId>
 				<version>3.0.0</version>
 			</plugin>
-
+		
 			<plugin>
 				<groupId>org.owasp</groupId>
 				<artifactId>dependency-check-maven</artifactId>
 				<version>6.1.5</version>
+				<configuration>
+					<skipTestScope>false</skipTestScope>
+				</configuration>
 				<reportSets>
 					<reportSet>
 						<reports>
@@ -222,13 +225,15 @@
 			<scope>test</scope>
 		</dependency>
 	
-	  <!-- Example of vulnerable dependency. IMPORTANT: remove <scope>test</scope> if it appears!!!! --> 
+	  <!-- Example of vulnerable dependency --> 
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
+      <scope>test</scope>
 		</dependency>
 
+    <!-- Example of vulnerable dependency -->
 		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
 		<dependency>
 		    <groupId>org.apache.commons</groupId>
