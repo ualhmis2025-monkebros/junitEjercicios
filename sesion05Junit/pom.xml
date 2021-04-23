@@ -157,7 +157,6 @@
 				<artifactId>dependency-check-maven</artifactId>
 				<version>6.1.5</version>
 				<configuration>
-					<skip>true</skip>
 					<skipTestScope>false</skipTestScope>
 					<formats>
 						<format>HTML</format>
